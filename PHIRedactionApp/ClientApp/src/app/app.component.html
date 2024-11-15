@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>PHI Redaction Application</h1>
+  <div class="file-input">
+    <input type="file" (change)="onFileSelected($event)" id="fileUpload" />
+    <label for="fileUpload">Choose File</label>
+  </div>
+  <p class="selected-file" *ngIf="selectedFile">{{ selectedFile.name }}</p>
+  <button class="upload-button" (click)="onUpload()">Upload & Redact</button>
+  <p class="message">{{ message }}</p>
+</div>
